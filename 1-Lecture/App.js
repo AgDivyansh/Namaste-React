@@ -55,7 +55,8 @@ const RestaurantCard = (props) => {
 
 const resturant =  [
                   {
-                    "info": {
+                    "info":
+                     {
                       "id": "72821",
                       "name": "Burger King",
                       "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/18/1f9d675e-7e2e-4a7a-a494-6bdf23af4853_72821.jpg",

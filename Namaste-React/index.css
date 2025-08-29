@@ -1,4 +1,130 @@
-#heading
-{
-    color: red;
+/* ------------------ HEADER ------------------ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #1f1f2e, #2d2d44); /* dark contrast gradient */
+  color: #f0f0f0;
+  border-bottom: 2px solid #ffb347; /* subtle warm accent */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 60px;
+  width: auto;
+  border-radius: 15px; /* smooth corners */
+  transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.nav-items ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items li {
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #e5e5e5;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-items li:hover {
+  color: #ffb347;
+}
+
+.nav-items li::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffb347;
+  transition: width 0.3s ease;
+}
+
+.nav-items li:hover::after {
+  width: 100%;
+}
+
+/* ------------------ SEARCH ------------------ */
+.search {
+  padding: 10px;
+}
+
+/* ------------------ RESTAURANT CARD ------------------ */
+.res-card {
+  width: 240px;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, rotate 0.3s ease;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  text-align: center;
+}
+
+.res-card:hover {
+  transform: translateY(-8px) rotate(-2deg) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.res-card .res-logo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom: 4px solid #fff;
+}
+
+.res-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 12px 0;
+  color: #2d3436;
+  text-shadow: 1px 1px 0px #fff;
+  letter-spacing: 1px;
+}
+
+.res-card::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20%;
+  width: 60%;
+  height: 10px;
+  background: radial-gradient(circle, rgba(255, 0, 150, 0.4), transparent);
+  filter: blur(8px);
+}
+
+/* .res-details{
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+
+} */
+
+
+.res-container{
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
